@@ -7,7 +7,9 @@ const numero = () => {
   let es_valido = false;
   do {
     var x = parseInt(prompt("ingrese un número entero entre 1 y 20"));
-    es_valido = numero_entero_valido(x, 1, 20);
+    if (!isNaN(x)){
+      es_valido = numero_entero_valido(x, 1, 20);
+    }
     if (!es_valido) {
       alert("Número errado, debe estar entre 1 y 20");
     }
